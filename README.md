@@ -37,6 +37,8 @@ examples/skill-card.example.yaml # 示例卡（不生效，仅供参照）
 | 冲突 | `conflict_signatures` 不得与池内既有卡强冲突 |
 | 格式 | 通过 `scripts/validate_pool_skill.py` 校验（CI 强制） |
 
+> CI 工作流已作为模板放在 `ci/validate.yml`。启用方式：仓库 owner 具备 `workflow` 权限后，将其复制到 `.github/workflows/validate.yml` 并提交即可。未启用前请本地运行 `python scripts/validate_pool_skill.py` 自检。
+
 ## 四、只读获取
 
 ```bash

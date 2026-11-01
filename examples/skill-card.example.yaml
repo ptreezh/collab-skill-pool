@@ -1,0 +1,19 @@
+# 示例技能卡（不生效，仅供格式参照；请勿直接复制 id）
+id: sk_0000000000aa
+name: 示例：周报结构模板
+apply_expert_ids:
+  - ex-workplace-writing
+fingerprint: fp-example-0001
+sample_count: 12
+major_type: success
+conflict_signatures: []
+skill_text: |
+  当用户要求写周报时，按「本周完成事项（含量化结果）→ 遇到的问题与处理 → 下周计划（含依赖）→ 需要上级决策的事项」四段组织；
+  每条完成事项必须带数字结果，无法量化的写清交付物与接收方。
+status: candidate
+owner: example-contributor
+unit: pool
+created_at: "2026-11-01"
+updated_at: "2026-11-01"
+license: CC-BY-4.0
+source_note: 脱敏自通用职场写作场景的多次复盘（无客户信息）

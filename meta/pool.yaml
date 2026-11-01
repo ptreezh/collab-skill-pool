@@ -1,0 +1,30 @@
+# 公共技能池元信息
+name: collab-skill-pool
+display_name: 企业智能体公共技能池
+version: 1.0
+visibility: public
+maintainers:
+  - ptreezh
+default_branch: main
+card_dir: pool/skills
+
+# 发布门槛（与协同后台、安装官保持一致，管理员不可绕过）
+thresholds:
+  min_sample_count: 10
+  min_confidence: 0.6
+  allowed_status: [candidate, approved, deprecated]
+  allow_failure_type: true   # 失败教训（major_type: failure）同样收录，但必须在 skill_text 说明适用边界
+
+# 隐私红线：命中即拒绝合并
+privacy:
+  forbid_personal_samples: true
+  forbid_raw_conversation: true
+  forbid_credentials: true
+  require_desensitized: true
+
+# 审核策略
+review:
+  mode: manual_pr_review     # PR + 维护者人工审核（不自动合并）
+  max_review_days: 5
+  require_pr_template: true
+  ci_required: true
